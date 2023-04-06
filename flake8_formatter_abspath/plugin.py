@@ -18,4 +18,5 @@ class AbsolutePathFormatter(default.Default):
             "path": os.path.abspath(error.filename),
             "row": error.line_number,
             "col": error.column_number,
+            **(default.COLORS if self.color else default.COLORS_OFF),
         }
